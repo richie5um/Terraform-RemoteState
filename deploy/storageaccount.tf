@@ -1,11 +1,10 @@
 resource "azurerm_storage_account" "sa-func-helloworld" {
-  name                     = "func${random_id.rg.hex}"
-  resource_group_name      = azurerm_resource_group.rg-func-helloworld.name
-  location                 = azurerm_resource_group.rg-func-helloworld.location
+  name                     = "funchelloworld${module.resource-group.rg-rnd.hex}"
+  resource_group_name      = module.resource-group.rg-main.name
+  location                 = module.resource-group.rg-main.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 }
-
 
 data "azurerm_storage_account_sas" "sas-func-helloworld" {
   connection_string = azurerm_storage_account.sa-func-helloworld.primary_connection_string

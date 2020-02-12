@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"remote-state.resource-group","Source":"../resource-group","Dir":"../modules/resource-group"},{"Key":"resource-group","Source":"../modules/resource-group","Dir":"../modules/resource-group"},{"Key":"","Source":"","Dir":"."},{"Key":"remote-state","Source":"../modules/remote-state","Dir":"../modules/remote-state"}]}
